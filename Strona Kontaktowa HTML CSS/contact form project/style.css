@@ -1,0 +1,333 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,300&display=swap');
+
+
+
+/* Global Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+  
+}
+
+
+/* Color Variables */
+
+:root {
+
+    --lightPurple: #7D64FE;
+    --darkPurple: #7860F3;
+    --bigCircleGrey: #DEE1E6;
+    --smallCircleRed: #FF6B6B;
+    --formTextAndBorders: #CECECE;
+    --mainWhite: #ffffff;
+} 
+
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--lightPurple);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+
+
+
+/* Background Circles Styling */
+
+
+.leftPurpleCircle, .bigGreyCircle, .smallRedCircle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+
+.leftPurpleCircle {
+    height: 70%;
+    width: 30%;
+    background: var(--darkPurple);
+    bottom: -10%;
+    left: -15%;
+}
+
+
+.bigGreyCircle {
+    height: 110%;
+    width: 60%;
+    background-color: var(--bigCircleGrey);
+    right: -20%;
+    bottom: -10%;
+}
+
+
+.smallRedCircle {
+    height: 90%;
+    width: 50%;
+    background-color: var(--smallCircleRed);
+    right: -20%;
+    bottom: -10%;
+}
+
+
+
+
+.contactSections {
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+
+
+/* Left Section With H1 and Icons */
+
+
+
+.leftSection { 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.leftSection h1 {
+    color: var(--mainWhite);
+    font-size: 8rem;
+    position: relative;
+    margin-top: 1em;
+}
+
+.leftSection span {
+    display: block;
+}
+
+.contactIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    margin-top: 5em;
+}
+
+.contactIcons img {
+    margin-right: 2.5em;
+    border-radius: 10px;
+}
+
+
+.leftSection h1::after {
+    position: absolute;
+    content: '';
+    width: 1em;
+    height: 5%;
+    background: var(--mainWhite);
+    left: 0;
+    bottom: -.3em;
+    border-radius: 8px;
+}
+
+
+/* Right Section with Form */
+
+
+.rightSection {
+    display: flex;
+    flex-direction: column;
+background-color: var(--mainWhite);
+padding: 4em 6em;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+input {
+    border: none;
+    border-bottom: 2px solid var(--formTextAndBorders);
+}
+
+
+input, textarea {
+    font-size: 2rem;
+    margin: 1em;
+    padding: .5em;
+    color: var(--darkPurple);
+    outline: var(--darkPurple);
+}
+
+
+input:focus {
+    border-bottom: 2px solid var(--lightPurple);
+}
+
+input:focus::placeholder {
+    color: var(--lightPurple);
+}
+
+
+
+input::placeholder, textarea::placeholder
+{
+    color: var(--formTextAndBorders);
+}
+
+textarea {
+    border: 2px solid var(--formTextAndBorders);
+}
+
+textarea:focus {
+    border: 2px solid var(--lightPurple);
+}
+
+
+
+button {
+    font-size: 2rem;
+    color: var(--mainWhite);
+    background: var(--darkPurple);
+    border: none;
+    width: 9em;
+    margin: 0 auto;
+    padding: .5em;
+    border-radius: 20px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover, button:focus {
+    background-color: var(--lightPurple);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+/* MEDIA QUERIES --------------------- */
+
+
+/* 1200px */
+
+
+@media only screen and (max-width: 1200px) {
+
+    .leftSection h1 {
+        font-size: 6rem;
+    }
+
+    input,textarea {
+        font-size: 1.7rem;
+    }
+
+}
+
+/* 1000px */
+
+
+@media only screen and (max-width: 1000px) {
+
+
+    .bigGreyCircle {
+        display: none;
+    }
+    .contactSections {
+        flex-direction: column;
+    }
+
+    .contactIcons {
+        align-self: center;
+    }
+
+    .rightSection {
+        width: 70%;
+        margin: 3em auto;
+    }
+
+}
+
+
+
+/* 800px */ 
+
+@media only screen and (max-width: 800px) { 
+    .smallRedCircle {
+        height: 60%;
+    }
+
+    .leftSection h1 {
+        font-size: 5.2rem;
+    }
+
+    .contactIcons img {
+        width: 4.5em
+    }
+
+    .rightSection {
+        padding: 2em 5em;
+    }
+
+    input, textarea {
+        font-size: 1.5rem;
+    }
+
+}
+
+
+/* 600 px */
+
+
+@media only screen and (max-width: 600px) {
+    .rightSection {
+        width: 85%;
+    }
+
+
+    button {
+        margin: .5em auto;
+    }
+}
+
+
+/* 400px */
+
+@media only screen and (max-width: 400px) {
+.leftSection h1 {
+    font-size: 4.4rem;
+}
+
+.rightSection {
+    padding: 1em 2.5em;
+}
+
+}
+
+/* 330 px */
+
+
+@media only screen and (max-width: 330px){
+
+    .leftSection h1 {
+        font-size: 4.3rem;
+    }
+
+    .rightSection {
+        padding: 1em 1.8em;
+    }
+
+    button {
+        width: 7em;
+    }
+}
