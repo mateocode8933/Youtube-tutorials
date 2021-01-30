@@ -1,0 +1,62 @@
+:root {
+    --firstColor: linear-gradient(90deg, #755bea, #ff72c0 );
+    --secondColor: linear-gradient(90deg, #0162c8, #55e7fc );
+}
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #1a1431;
+}
+
+
+
+a {
+
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    background: var(--firstColor);
+    padding: 30px 60px;
+    border-radius: 25px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+a:nth-child(2) {
+    background: var(--secondColor);
+}
+
+
+span {
+    position: absolute;
+    background-color: #fff;
+    animation: show .8s linear;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+
+
+@keyframes show {
+
+0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+}
+
+100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+}
+
+}

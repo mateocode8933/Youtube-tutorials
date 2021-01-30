@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cool Button Effect</title>
+</head>
+<body>
+    
+
+<a href="#">Kliknij Mnie!</a>
+<a href="#">Kliknij Mnie!</a>
+
+
+
+
+<script>
+
+
+const links = document.querySelectorAll('a');
+
+
+links.forEach(btn => btn.addEventListener('click', function(e){
+
+    // console.log(e.clientX + 'x') - wspolrzedne x klikniecia;
+    // console.log(e.clientY + 'y') - wspolrzedne y klikniecia;
+
+    // console.log(e.target.offsetLeft + 'left') - odleglosc elementu od lewej krawedzi okna;
+    // console.log(e.target.offsetTop + 'top')- odleglosc elementu od górnej krawedzi okna;;
+
+    // console.log(e.target) element na ktory klikamy;
+
+    let x = e.clientX - e.target.offsetLeft;
+    console.log(x);
+
+    let y = e.clientY - e.target.offsetTop;
+    console.log(y);
+
+
+    const newSpan = document.createElement('span');
+
+    newSpan.style.left = x + 'px';
+    newSpan.style.top = y + 'px';
+
+    this.appendChild(newSpan);
+
+
+}))
+
+
+
+</script>
+
+
+</body>
+</html>
