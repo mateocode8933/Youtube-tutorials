@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:  "Montserrat", 'sans-serif';
+    
+}
+/* ostylujemy naszego forma i flexem wszystko ustawimy na srodku i pod soba */
+
+
+:root {
+    --buttonColor: linear-gradient(90deg, #0162c8, #55e7fc);
+    --textAndBorderColor: #0162c8;
+}
+
+h1 {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.548);
+}
+form {
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 25px 1px rgba(0, 0, 0, 0.336);
+    padding: 20px 20px;
+}
+
+.form-section {
+ 
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-input {
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    padding-left: 2px;
+    border:none;
+    outline: none;
+    color: rgba(0, 0, 0, 0.548);
+   
+    
+}
+
+.input-label {
+    position: absolute;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.308);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.input-label::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-image: linear-gradient(90deg, #0162c8, #55e7fc);
+    left: 0;
+    bottom: -1px;
+    border-radius: 25px;
+    transform: translateX(-100%);
+    transition: all .3s ease-in-out;
+}
+
+
+
+.form-input:focus+.input-label::after {
+    transform: translateX(0%);
+}
+
+.label-name {
+    position: absolute;
+    bottom: 0;
+    transition: all .3s ease-in-out;
+    color: rgba(0, 0, 0, 0.644);
+    
+}
+
+.form-input:focus +.input-label .label-name {
+    bottom: 35px;
+    font-size: 14px;
+    color: #0162c8;
+    font-weight: bold;
+}
+
+.form-input:valid +.input-label .label-name  
+{
+    bottom: 35px;
+    font-size: 14px;
+    color: #0162c8;
+    font-weight: bold;
+}
+
+
+button {
+    font-size: 20px;
+    width: 80%;
+    margin-top: 25px;
+    background-image: linear-gradient(90deg, #0162c8, #55e7fc);
+    border:none;
+    padding: 5px 0px;
+    color: white;
+    border-radius: 20px;
+}
