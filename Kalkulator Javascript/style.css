@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    background-image:linear-gradient(to right bottom, #e4a7db, #d245db, #a22dce, #7d3ac5, #4d56bd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.calculator{ 
+    height: 60vh;
+    min-width: 370px;
+    max-width: 370px;
+}
+
+
+.display {
+    width: 100%;
+    min-height: 20%;
+    max-height: min-content;
+    background-color:rgba(29, 27, 27, 0.151);
+    box-shadow:  rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: white;
+    word-break: break-all;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+.currentNumber {
+    font-size: 35px;
+
+}
+
+
+.previousNumber {
+    color: rgb(182,182,182);
+    font-size: 20px;
+}
+
+.mathSign {
+    font-size: 22px;
+}
+
+
+.panel {
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2px;
+}
+
+.panel button {
+    font-size: 25px;
+    background-color :rgba(0,0,0,0.466);
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all .2s ease-in-out;
+}
+
+
+button:hover {
+    background-color:rgba(0,0,0,0.546);
+}
+
+.equals {
+    grid-row: -1/-3;
+    grid-column: -2/-1;
+}
+
+
+.calculator-history {
+    height: 60vh;
+    margin: 20px;
+    width: 150px;
+    background-color: rgba(20,27,27,0.151);
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.history {
+    list-style: none;
+}
+
+.history-title {
+    padding-bottom: 10px;
+}
+
+
+.history-btn {
+    color: white;
+    background: rgba(29,27,27,0.603);
+    border: none;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    display: none;
+    outline: none;
+    margin: 5px auto;
+}
+.history-btn.active {
+    display: block;
+}
+
+.history-item {
+    margin: 8px 0px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(29,27,27, 0.233);
+    padding-bottom: 5px;
+}
