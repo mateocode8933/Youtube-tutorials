@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "username": "user123",
+      "email": "user@gmail.com",
+      "password": "111111111",
+      "repeat-password": "111111111",
+      "id": 1
+    },
+    {
+      "username": "user1234",
+      "email": "asddas@wp.pl",
+      "password": "1111111",
+      "repeat-password": "1111111",
+      "id": 2
+    },
+    {
+      "username": "user1234",
+      "email": "user1234@gmail.com",
+      "password": "haslohaslo",
+      "repeat-password": "haslohaslo",
+      "id": 3
+    }
+  ]
+}
