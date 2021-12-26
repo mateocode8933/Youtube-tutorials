@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="70" viewBox="0 0 90 70">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7d62f2"/>
+      <stop offset="1" stop-color="#a757ac"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7d62f2"/>
+      <stop offset="1" stop-color="#cc3fd5"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_102" data-name="Group 102" transform="translate(-61 -160)">
+    <rect id="Rectangle_43" data-name="Rectangle 43" width="90" height="70" transform="translate(61 160)" fill="rgba(132,132,132,0)"/>
+    <g id="Group_12" data-name="Group 12" transform="translate(-46 151)">
+      <g id="Group_11" data-name="Group 11" transform="translate(-3 -122)">
+        <rect id="Rectangle_11" data-name="Rectangle 11" width="11" height="55.5" rx="5.5" transform="matrix(0.921, -0.391, 0.391, 0.921, 129.288, 142.413)" fill="#3e2b94"/>
+        <rect id="Rectangle_10" data-name="Rectangle 10" width="11" height="55.5" rx="5.5" transform="translate(131.792 136.921) rotate(11)" fill="url(#linear-gradient)"/>
+        <rect id="Rectangle_13" data-name="Rectangle 13" width="10.5" height="38.5" rx="5.25" transform="translate(154.929 160.618) rotate(-30)" fill="#3e2b94"/>
+        <rect id="Rectangle_12" data-name="Rectangle 12" width="11" height="38.5" rx="5.5" transform="matrix(0.966, 0.259, -0.259, 0.966, 157.096, 153.152)" fill="url(#linear-gradient)"/>
+        <rect id="Rectangle_14" data-name="Rectangle 14" width="11.5" height="28" rx="5.75" transform="translate(180.09 194.245) rotate(-164)" fill="url(#linear-gradient-3)"/>
+      </g>
+    </g>
+  </g>
+</svg>
