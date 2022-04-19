@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap");
+
+html {
+  font-family: "Montserrat", "sans-serif";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    rgb(55, 65, 81),
+    rgb(17, 24, 39),
+    rgb(0, 0, 0)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxes {
+  display: flex;
+  gap: 100px;
+}
+
+.boxes div {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.tooltip {
+  position: absolute;
+  min-width: 180px;
+  padding: 30px 15px;
+  background: rgb(40, 90, 184);
+  border-radius: 15px;
+  color: white;
+}
+
+.tooltip.top {
+  transform: translateY(-140%);
+}
+.tooltip.bottom {
+  bottom: 0;
+  transform: translateY(130%);
+}
+
+.tooltip::after {
+  position: absolute;
+  background: inherit;
+  content: "";
+  width: 24px;
+  height: 24px;
+}
+
+.tooltip.top::after {
+  bottom: -6px;
+  left: 13px;
+  transform: rotate(45deg);
+}
+
+.tooltip.bottom::after {
+  top: -6px;
+  left: 13px;
+  transform: rotate(45deg);
+}
+
+.boxes div:hover {
+  transform: scale(105%);
+}
+
+.red {
+  background: rgb(203, 69, 69);
+}
+.green {
+  background: rgb(62, 191, 62);
+}
+
+.blue {
+  background: rgb(65, 65, 199);
+}
