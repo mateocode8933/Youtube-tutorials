@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body button,
+body div {
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  background-color: black;
+  color: white;
+  display: flex;
+  padding: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+}
+
+.header-title span:first-child {
+  color: yellow;
+  margin-right: 5px;
+}
+.header-title span:last-child {
+  background: yellow;
+  color: black;
+  border-radius: 25%;
+  max-width: max-content;
+  margin-left: 10px;
+  font-size: 20px;
+  padding: 3px 10px;
+}
+
+.search-bar {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 80px;
+}
+.search-bar-input {
+  min-width: 400px;
+  font-size: 18px;
+  padding-left: 8px;
+  height: 100%;
+}
+
+.search-bar-icon {
+  background: yellow;
+  padding: 2px 5px;
+  display: flex;
+  border-top-right-radius: 15%;
+  border-bottom-right-radius: 15%;
+}
+
+.header-basket {
+  display: flex;
+  align-items: end;
+  font-size: 20px;
+  font-weight: 500;
+  gap: 5px;
+}
+
+.basket-clear-btn {
+  background: none;
+  color: yellow;
+  border: none;
+  font-size: 20px;
+  align-self: start;
+  cursor: pointer;
+  display: none;
+}
+.basket-clear-btn.active {
+  display: block;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0px;
+  gap: 15px;
+}
+
+.categories-title {
+  font-size: 35px;
+  letter-spacing: 1px;
+}
+
+.categories-items {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0px 10px;
+  justify-content: center;
+}
+
+.categories-items button {
+  font-size: 20px;
+  padding: 10px 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.categories-items button:hover {
+  background: black;
+  color: yellow;
+}
+
+.categories-items button.active {
+  background: black;
+  color: yellow;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 30px;
+}
+
+.product-item {
+  position: relative;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.product-item-sale-info {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: black;
+  color: yellow;
+  padding: 5px 15px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.product-item.on-sale .product-item-sale-info {
+  display: block;
+}
+.product-item:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.product-item img {
+  width: 220px;
+}
+
+.product-name {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.product-description {
+  color: rgb(94, 94, 94);
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.product-price {
+  color: green;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-price .price-sale {
+  display: none;
+}
+
+.product-item.on-sale .price {
+  color: black;
+  font-size: 13px;
+  position: relative;
+}
+
+.product-item.on-sale .price::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 2px;
+  background: black;
+  top: 30%;
+  left: -5%;
+  transform: rotate(-10deg);
+}
+
+.product-item.on-sale .price-sale {
+  display: block;
+}
+
+.product-add-to-basket-btn {
+  background: black;
+  color: white;
+  width: 60%;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.product-add-to-basket-btn:hover {
+  color: yellow;
+}
+
+.empty-state {
+  display: none;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+}
+.empty-state.active {
+  display: block;
+}
+
+@media only screen and (min-width: 1300px) {
+  .container {
+    display: flex;
+  }
+  .categories-items {
+    flex-direction: column;
+  }
+  .categories {
+    margin: 0px;
+    border-right: 2px solid rgb(190, 190, 190);
+    min-width: 350px;
+  }
+  .categories-items button {
+    padding: 10px 50px;
+    border-radius: 5px;
+  }
+  .categories-title {
+    background: yellow;
+    width: 100%;
+    text-align: center;
+    padding: 6px;
+  }
+  .products {
+    margin-left: 15px;
+    gap: 50px;
+  }
+}
